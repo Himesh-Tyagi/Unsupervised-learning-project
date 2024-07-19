@@ -11,8 +11,8 @@ url = 'https://raw.githubusercontent.com/Himesh-Tyagi/Unsupervised-learning-proj
 
 # Read the CSV file, skipping bad lines
 try:
-    movies_df = pd.read_csv(url, delimiter=',', error_bad_lines=False)
-    print(movies_df.head())
+    movies = pd.read_csv(url, delimiter=',', error_bad_lines=False)
+    print(movies.head())
 except Exception as e:
     print(f"Error: {e}")
     print("Please check the URL and ensure the file exists.")
@@ -21,8 +21,8 @@ url = 'https://raw.githubusercontent.com/Himesh-Tyagi/Unsupervised-learning-proj
 
 # Read the CSV file with specified encoding and error handling
 try:
-    ratings_df = pd.read_csv(url, delimiter=',', encoding='utf-8', error_bad_lines=False)
-    print(ratings_df.head())
+    ratings = pd.read_csv(url, delimiter=',', encoding='utf-8', error_bad_lines=False)
+    print(ratings.head())
 except Exception as e:
     print(f"Error: {e}")
     print("Please check the URL and ensure the file exists.")
