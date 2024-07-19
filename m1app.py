@@ -6,7 +6,16 @@ from fuzzywuzzy import process
 import streamlit as st
 
 # Load the data
-movies = pd.read_csv("https://github.com/Himesh-Tyagi/Unsupervised-learning-project/blob/main/movies.csv")
+# URL of the raw CSV file on GitHub
+url = 'https://raw.githubusercontent.com/Himesh-Tyagi/Unsupervised-learning-project/main/movies.csv'
+
+# Read the CSV file, skipping bad lines
+try:
+    movies_df = pd.read_csv(url, delimiter=',', error_bad_lines=False)
+    print(movies_df.head())
+except Exception as e:
+    print(f"Error: {e}")
+    print("Please check the URL and ensure the file exists.")
 ratings = pd.read_csv("https://github.com/Himesh-Tyagi/Unsupervised-learning-project/blob/main/ratings.csv")
 
 # Prepare the data
