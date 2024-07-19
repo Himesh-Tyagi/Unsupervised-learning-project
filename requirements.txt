@@ -2,5 +2,5 @@ numpy==1.25.2
 pandas==2.1.0
 streamlit==1.26.0
 seaborn==0.13.2
-fuzzywuzzy==24.1.2
+fuzzywuzzy==0.18.0
 scipy.sparse ==1.14.0
