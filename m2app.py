@@ -12,14 +12,14 @@ ratings_url = 'https://raw.githubusercontent.com/Himesh-Tyagi/Unsupervised-learn
 # Read the movies CSV file
 try:
     movies = pd.read_csv(movies_url)
-    st.write("Movies data loaded successfully.")
+   # st.write("Movies data loaded successfully.")
 except Exception as e:
     st.write(f"Error loading movies data: {e}")
 
 # Read the ratings CSV file
 try:
     ratings = pd.read_csv(ratings_url)
-    st.write("Ratings data loaded successfully.")
+   # st.write("Ratings data loaded successfully.")
 except Exception as e:
     st.write(f"Error loading ratings data: {e}")
 
