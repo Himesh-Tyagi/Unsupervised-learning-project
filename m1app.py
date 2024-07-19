@@ -16,7 +16,16 @@ try:
 except Exception as e:
     print(f"Error: {e}")
     print("Please check the URL and ensure the file exists.")
-ratings = pd.read_csv("https://github.com/Himesh-Tyagi/Unsupervised-learning-project/blob/main/ratings.csv")
+# URL of the raw CSV file on GitHub
+url = 'https://raw.githubusercontent.com/Himesh-Tyagi/Unsupervised-learning-project/main/ratings.csv'
+
+# Read the CSV file with specified encoding and error handling
+try:
+    ratings_df = pd.read_csv(url, delimiter=',', encoding='utf-8', error_bad_lines=False)
+    print(ratings_df.head())
+except Exception as e:
+    print(f"Error: {e}")
+    print("Please check the URL and ensure the file exists.")
 
 # Prepare the data
 movies_users = ratings.pivot(index='movieId', columns='userId', values='rating').fillna(0)
